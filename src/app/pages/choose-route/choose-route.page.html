@@ -1,0 +1,77 @@
+<ion-content>
+
+  <ion-fab horizontal="end" vertical="top" slot="fixed" edge>
+    <ion-fab-button color="light">
+      <ion-icon name="menu"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list>
+      <ion-fab-button color="light">
+        <ion-icon name="settings"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <div id="map"></div>
+
+  <div class="choose">
+    <br>
+    <small>Speed: {{ speed }} Km/h</small>
+    <!-- use *Ng to get use many routes as applicable and make them clickable-->
+    <ion-grid>
+      <ion-row>
+        <!-- HEADER ROW -->
+        <ion-col>
+          <small>Route</small>
+        </ion-col>
+        <ion-col>
+          <small>Depart</small>
+        </ion-col>
+        <ion-col>
+          <small>Arrive</small>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <small>Direct</small>
+        </ion-col>
+        <ion-col>
+          <small>Amic 15:20</small>
+        </ion-col>
+        <ion-col>
+          <small>Junction 15:35</small>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <small>Circuit</small>
+        </ion-col>
+        <ion-col>
+          <small>Amic 15:30</small>
+        </ion-col>
+        <ion-col>
+          <small>Junction 15:50</small>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <small>Direct</small>
+        </ion-col>
+        <ion-col>
+          <small>Amic 15:40</small>
+        </ion-col>
+        <ion-col>
+          <small>Junction 15:56</small>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div>
+
+</ion-content>
+
