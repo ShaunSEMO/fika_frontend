@@ -8,18 +8,18 @@ import {Router} from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
-  private user = {
+  public user = {
     email: '',
     password: ''
   }
 
-  constructor( private router: Router) { 
+  constructor( private router: Router) {
 
   }
 
   mainAction(){
 
-    //check credentials 
+    //check credentials
     this.router.navigate(['choose-platform']);
   }
 

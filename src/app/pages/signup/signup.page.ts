@@ -8,7 +8,7 @@ import {Router} from '@angular/router';
 })
 export class SignupPage implements OnInit {
 
-  private user = {
+  publics user = {
     username: '',
     email: '',
     prefPlatform: '',
