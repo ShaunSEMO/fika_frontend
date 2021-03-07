@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content (swipeleft)="swipeleft()">
 
   <ion-fab horizontal="end" vertical="top" slot="fixed" edge>
     <ion-fab-button color="light">
@@ -19,6 +19,7 @@
   <div class="choose">
     <br>
     <small>Speed: {{ speed }} Km/h</small>
+    <br>
     <!-- use *Ng to get use many routes as applicable and make them clickable-->
     <ion-grid>
       <ion-row>

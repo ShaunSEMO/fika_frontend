@@ -13,21 +13,8 @@ export class ChoosePlatformPage implements OnInit {
   ngOnInit() {
   }
 
-  choosePlatAction(plat: string){
-    switch(plat){
-      case "noPref":
-        this.router.navigateByUrl('choose-route', {state:{
-          'Platform' : 'none'
-      }});
-      case "Pref":
-        this.router.navigateByUrl('choose-route', {state:{
-          'Platform' : 'userPref'
-      }});
-      case "Wits":
-        this.router.navigateByUrl('choose-route', {state:{
-          'Platform' : 'Wits'
-      }});
-    }
+  choosePlatAction(){
+    this.router.navigateByUrl('choose-start-dest')
   }
 
 }

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import * as L from "leaflet";
 import * as $ from "jquery";
 import { AlertController } from '@ionic/angular';
+// import { timeStamp } from 'console';
 
 @Component({
   selector: 'app-choose-route',
@@ -24,7 +25,7 @@ export class ChooseRoutePage implements OnInit {
       }
     });
 
-    let socket = new WebSocket('ws://127.0.0.1:8000/ws/trackBus')
+    let socket = new WebSocket('ws://192.168.43.195:8000/ws/trackBus')
     socket.onmessage = (e) => {
       let parsed_data = JSON.parse(e.data);
       let speed_ms = parsed_data['speed'];
@@ -39,13 +40,19 @@ export class ChooseRoutePage implements OnInit {
 
   ngOnInit() {}
 
+  showBus() {
+    this.router.navigateByUrl('choose-start-dest');
+  }
 
+  swipeleft() {
+    this.router.navigateByUrl('choose-platform');
+  }
 
   ngAfterViewInit(){ 
     $(document).ready(function(){ 
       
 
-      let socket = new WebSocket('ws://127.0.0.1:8000/ws/trackBus')
+      let socket = new WebSocket('ws://192.168.43.195:8000/ws/trackBus')
 
       socket.onopen = (e) => {
         alert('connection established')
